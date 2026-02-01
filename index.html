@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Sayed | Performance Marketing Specialist</title>
+    <meta name="description"
+        content="Performance Marketing & Social Media Specialist with 5+ years managing paid campaigns on Meta & Google Ads across Egypt and the GCC.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Icons (using simple text/emojis for now or placeholder classes, SVGs handled in CSS/JS if needed, using FontAwesome via CDN for professional look) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Ahmed<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav_about">About</a>
+                <a href="#skills" data-i18n="nav_skills">Skills</a>
+                <a href="#experience" data-i18n="nav_experience">Experience</a>
+                <a href="#projects" data-i18n="nav_projects">Projects</a>
+                <a href="#contact" class="btn-nav" data-i18n="nav_contact">Contact</a>
+                <button id="lang-toggle" class="lang-btn">عربي</button>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 data-i18n="hero_title">Ahmed Sayed <span class="highlight">|</span> Performance Marketing & Social
+                    Media Specialist</h1>
+                <p class="subtitle" data-i18n="hero_subtitle">5+ years managing Meta & Google Ads across Egypt and the
+                    GCC</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_work">View My Work</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_hire">Hire Me</a>
+                </div>
+                <div class="hero-contact">
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</span>
+                    <div class="socials">
+                        <a href="https://linkedin.com/in/ahmedsayedsa" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="mailto:ahmedsayed11113@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/201147736668" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Image loaded via JS/LocalStorage or default -->
+                <img id="hero-img" src="assets/images/ahmed-sayed-hero.png"
+                    alt="Ahmed Sayed – Performance Marketing Specialist" class="hero-headshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_about">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-i18n="about_bio_1">Performance Marketing & Social Media Specialist with 5+ years managing
+                        paid campaigns on Meta, Google and other digital platforms for travel, medical, beauty, and home
+                        services brands in Egypt and the GCC.</p>
+                    <p data-i18n="about_bio_2">Proven track record optimizing 40+ ad accounts in Meta Ads Manager and
+                        Google Ads—driving engagement uplifts of up to 30% and reducing cost per conversion by around
+                        10%. Skilled at A/B testing creatives with design teams and using analytics tools for real-time
+                        optimization and reporting.</p>
+                    <div class="timeline">
+                        <h3 data-i18n="timeline_title">Career Timeline</h3>
+                        <div class="timeline-item">
+                            <span class="year">2017 - Present</span>
+                            <span class="role" data-i18n="role_elmaali">Elmaali Tours</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2019 - 2020</span>
+                            <span class="role" data-i18n="role_tiehouse">Tie House</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2021</span>
+                            <span class="role" data-i18n="role_nogget">Nogget Tours</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2022 - 2023</span>
+                            <span class="role" data-i18n="role_shaymaa">Dr. Shaymaa Salman</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2023 - 2024</span>
+                            <span class="role" data-i18n="role_amir">Amir Eldomiaty</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="year">2024</span>
+                            <span class="role" data-i18n="role_marketing">Markting.Limitd</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img id="about-img" src="assets/about_placeholder.jpg" alt="About Ahmed">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_skills">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <!-- Skill Items -->
+                <div class="skill-card">
+                    <i class="fab fa-facebook-f"></i>
+                    <h3 data-i18n="skill_meta">Meta Ads</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-google"></i>
+                    <h3 data-i18n="skill_google">Google Ads</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 data-i18n="skill_campaign">Campaign Optimization</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3 data-i18n="skill_lead">Lead Generation</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3 data-i18n="skill_whatsapp">WhatsApp Marketing</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3 data-i18n="skill_copy">Ad Copywriting</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3 data-i18n="skill_analytics">Performance Analysis</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3 data-i18n="skill_gcc">Egypt & GCC Markets</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_experience">Professional Experience</h2>
+            <div class="experience-list">
+
+                <!-- Experience 1 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 data-i18n="exp_title_1">Social Media Specialist & Media Buyer</h3>
+                            <span class="company">Elmaali Tours</span>
+                        </div>
+                        <span class="date">Jan 2017 - Present</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="exp_desc_1_1">Orchestrated paid campaigns transforming the brand from inactive to
+                            high-visibility.</li>
+                        <li data-i18n="exp_desc_1_2">Built strong demand leading to fully booked summer packages months
+                            in advance.</li>
+                        <li data-i18n="exp_desc_1_3">Designed creative content leading to 30% increase in CTR and
+                            revenue uplift.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 data-i18n="exp_title_2">Media Buyer</h3>
+                            <span class="company">Markting.Limitd</span>
+                        </div>
+                        <span class="date">May 2024 - Sep 2024</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="exp_desc_2_1">Managed 40+ ad accounts; achieved ~30% increase in ad engagement.
+                        </li>
+                        <li data-i18n="exp_desc_2_2">Reduced cost per conversion by ~10% across service and home-care
+                            brands.</li>
+                        <li data-i18n="exp_desc_2_3">Strong results in Bahrain (0.10 USD/visit) and UAE (0.14 AED/visit)
+                            markets.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 data-i18n="exp_title_3">Social Media Marketer</h3>
+                            <span class="company">Amir Eldomiaty</span>
+                        </div>
+                        <span class="date">Aug 2023 - Apr 2024</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="exp_desc_3_1">Led creative campaigns delivering ~10% growth in engagement & brand
+                            visibility.</li>
+                        <li data-i18n="exp_desc_3_2">Optimized campaigns leading to ~15% increase in key engagement
+                            metrics.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 data-i18n="exp_title_4">Social Media Specialist</h3>
+                            <span class="company">Dr. Shaymaa Salman</span>
+                        </div>
+                        <span class="date">Oct 2022 - Sep 2023</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="exp_desc_4_1">Built strategies for medical & cosmetic services.</li>
+                        <li data-i18n="exp_desc_4_2">Achieved ~20% reduction in CPL via Facebook & Instagram ads.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 5 & 6 (Grouped or separate, listed all for completeness) -->
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 data-i18n="exp_title_5">Social Media Specialist & Media Buyer</h3>
+                            <span class="company">Nogget Tours (2021) & Tie House (2019-2020)</span>
+                        </div>
+                        <span class="date">2019 - 2021</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li data-i18n="exp_desc_5_1">Nogget: Increased brand engagement by ~25% and improved ROI by
+                            ~15%.</li>
+                        <li data-i18n="exp_desc_5_2">Tie House: Increased reach by ~30% and brand visibility by 20% in 6
+                            months.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Case Studies -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_projects">Key Results & Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 4 (Elmaali Tours) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img id="project-img-4" src="assets/project4_placeholder.jpg" alt="Elmaali Tours">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_4_title">Elmaali Tours (Egypt)</h3>
+                        <p data-i18n="proj_4_desc">Always-on messaging campaigns generating 98k+ leads.</p>
+                        <div class="kpi-box">
+                            <span class="kpi-label" data-i18n="kpi_4_1_label">Conversations</span>
+                            <span class="kpi-value" data-i18n="kpi_4_1_val">98,496</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label" data-i18n="kpi_4_2_label">Spend</span>
+                            <span class="kpi-value" data-i18n="kpi_4_2_val">22,577 EGP</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label" data-i18n="kpi_4_3_label">Cost/Conv</span>
+                            <span class="kpi-value" data-i18n="kpi_4_3_val">0.23 EGP</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label" data-i18n="kpi_4_4_label">Avg CTR</span>
+                            <span class="kpi-value" data-i18n="kpi_4_4_val">8%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img id="project-img-1" src="assets/project1_placeholder.jpg" alt="Gulf Art Furniture">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_1_title">Gulf Art Furniture (GCC)</h3>
+                        <p data-i18n="proj_1_desc">High volume profile visits campaign targeting UAE/GCC market.</p>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Profile Visits</span>
+                            <span class="kpi-value">6,086</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Cost/Visit</span>
+                            <span class="kpi-value">0.05 AED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img id="project-img-2" src="assets/project2_placeholder.jpg" alt="Home Care Services">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_2_title">Home Care Services (UAE)</h3>
+                        <p data-i18n="proj_2_desc">Lead generation and conversation campaigns for home services.</p>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Conversations</span>
+                            <span class="kpi-value">389</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Cost/Msg</span>
+                            <span class="kpi-value">2.63 AED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img id="project-img-3" src="assets/project3_placeholder.jpg" alt="Bahrain Services">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_3_title">Service Campaigns (Bahrain)</h3>
+                        <p data-i18n="proj_3_desc">Efficient messaging campaigns for local service providers.</p>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Messages</span>
+                            <span class="kpi-value">52</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Cost/Msg</span>
+                            <span class="kpi-value">2.33 USD</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- GCC Projects (Data Added via Prompt) -->
+
+                <!-- 5. Gulf Art -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_5_title">Gulf Art Furniture (GCC)</h3>
+                        <p data-i18n="proj_5_desc">Generated over 5.4k profile visits and 191 high-intent furniture
+                            inquiries.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_5_1_label">Visits</span><span
+                                class="kpi-value" data-i18n="kpi_5_1_val">5,407</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_5_2_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_5_2_val">191</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_5_3_label">Cost/Visit</span><span
+                                class="kpi-value" data-i18n="kpi_5_3_val">$0.057</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_5_4_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_5_4_val">$2.71</span></div>
+                    </div>
+                </div>
+
+                <!-- 6. Perfect Skin -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_6_title">Perfect Skin Clinic (UAE)</h3>
+                        <p data-i18n="proj_6_desc">WhatsApp campaigns for aesthetic treatments driving 1.8k+
+                            conversations.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_6_1_val">1,808</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_2_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_6_2_val">31k+ AED</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_3_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_6_3_val">6.96 AED</span></div>
+                    </div>
+                </div>
+
+                <!-- 7. ByLeila -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_7_title">ByLeila Skin Care (GCC)</h3>
+                        <p data-i18n="proj_7_desc">Scaled skin care messaging funnel to 762+ conversations at efficient
+                            rates.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_7_1_val">762</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_2_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_7_2_val">$2,172</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_3_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_7_3_val">$2.85</span></div>
+                    </div>
+                </div>
+
+                <!-- 8. Best Clean -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_8_title">Best Clean (UAE)</h3>
+                        <p data-i18n="proj_8_desc">Home cleaning lead gen delivering 2.7k visits and hundreds of booking
+                            msgs.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_1_label">Visits</span><span
+                                class="kpi-value" data-i18n="kpi_8_1_val">2,719</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_2_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_8_2_val">550+</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_3_label">Cost/Visit</span><span
+                                class="kpi-value" data-i18n="kpi_8_3_val">$0.14</span></div>
+                    </div>
+                </div>
+
+                <!-- 9. Silver Shine -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_9_title">Silver Shine (GCC)</h3>
+                        <p data-i18n="proj_9_desc">Cleaning services push achieving 958 conversations at just $1.60
+                            each.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_9_1_val">958</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_2_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_9_2_val">$1.60</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_3_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_9_3_val">$1,530</span></div>
+                    </div>
+                </div>
+
+                <!-- 10. Fixer.bh -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_10_title">Fixer.bh (Bahrain)</h3>
+                        <p data-i18n="proj_10_desc">Maintenance services campaign driving 4.5k visits and 615 leads.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_10_1_label">Visits</span><span
+                                class="kpi-value" data-i18n="kpi_10_1_val">4,530</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_10_2_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_10_2_val">615</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_10_3_label">Cost/Visit</span><span
+                                class="kpi-value" data-i18n="kpi_10_3_val">$0.091</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_10_4_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_10_4_val">$1.88</span></div>
+                    </div>
+                </div>
+
+                <!-- 11. RIX -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_11_title">RIX Car Services (KSA)</h3>
+                        <p data-i18n="proj_11_desc">Broad targeting strategy for car care services in Saudi Arabia.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_11_1_label">Visits</span><span
+                                class="kpi-value" data-i18n="kpi_11_1_val">706</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_11_2_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_11_2_val">109</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_11_3_label">Cost/Visit</span><span
+                                class="kpi-value" data-i18n="kpi_11_3_val">0.40 SAR</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_11_4_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_11_4_val">6.05 SAR</span></div>
+                    </div>
+                </div>
+
+                <!-- 12. Toyzania -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_12_title">Toyzania (GCC)</h3>
+                        <p data-i18n="proj_12_desc">E-commerce toy store scaling to ~1,970 purchases with 84x ROAS.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_1_label">Purchases</span><span
+                                class="kpi-value" data-i18n="kpi_12_1_val">1,970</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_2_label">Cost</span><span
+                                class="kpi-value" data-i18n="kpi_12_2_val">11.44 AED</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_4_label">ROAS</span><span
+                                class="kpi-value" data-i18n="kpi_12_4_val">~84.24</span></div>
+                    </div>
+                </div>
+
+                <!-- 13. Salawat -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_13_title">Salawat App (Multi-Country)</h3>
+                        <p data-i18n="proj_13_desc">App promotion in KSA, Bahrain, Iraq via low-cost messaging.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_13_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_13_1_val">1,231</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_13_2_label">Cost KSA</span><span
+                                class="kpi-value" data-i18n="kpi_13_2_val">$0.42</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_13_3_label">Cost BH</span><span
+                                class="kpi-value" data-i18n="kpi_13_3_val">$0.88</span></div>
+                    </div>
+                </div>
+
+                <!-- 14. Maen Jarrar -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_14_title">Maen Jarrar Clinics (GCC)</h3>
+                        <p data-i18n="proj_14_desc">Targeted laser & dental messaging campaigns.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_14_1_label">Laser</span><span
+                                class="kpi-value" data-i18n="kpi_14_1_val">22</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_14_2_label">Dental</span><span
+                                class="kpi-value" data-i18n="kpi_14_2_val">37</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_14_3_label">Cost</span><span
+                                class="kpi-value" data-i18n="kpi_14_3_val">$2.86+</span></div>
+                    </div>
+                </div>
+
+                <!-- 15. Sakura -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_15_title">Sakura Active (GCC)</h3>
+                        <p data-i18n="proj_15_desc">Fashion brand awareness: 8k+ visits and 72k+ engagements.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_15_1_label">Visits</span><span
+                                class="kpi-value" data-i18n="kpi_15_1_val">8,659</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_15_2_label">Engage</span><span
+                                class="kpi-value" data-i18n="kpi_15_2_val">72k+</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_15_3_label">Cost/Visit</span><span
+                                class="kpi-value" data-i18n="kpi_15_3_val">$0.033</span></div>
+                    </div>
+                </div>
+
+                <!-- 16. Dr Beauty -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_16_title">Dr. Beauty (UAE)</h3>
+                        <p data-i18n="proj_16_desc">High-volume cosmetic clinic campaign driving 1,738 purchases.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_16_1_label">Purchases</span><span
+                                class="kpi-value" data-i18n="kpi_16_1_val">1,738</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_16_2_label">Cost</span><span
+                                class="kpi-value" data-i18n="kpi_16_2_val">11.76 AED</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_16_3_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_16_3_val">20.4k AED</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_services">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3 data-i18n="serv_1_title">Performance Marketing</h3>
+                    <p data-i18n="serv_1_desc">Data-driven campaigns focused on ROI and conversions.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fab fa-meta"></i>
+                    <h3 data-i18n="serv_2_title">Meta & Google Ads</h3>
+                    <p data-i18n="serv_2_desc">Full management of ad accounts, pixels, and targeting.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-funnel-dollar"></i>
+                    <h3 data-i18n="serv_3_title">Lead Generation</h3>
+                    <p data-i18n="serv_3_desc">High-quality leads for Egypt & GCC markets.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3 data-i18n="serv_4_title">Strategy & Content</h3>
+                    <p data-i18n="serv_4_desc">Creative briefing and ad copywriting that sells.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_testimonials">Testimonials</h2>
+            <div class="section-underline"></div>
+            <div class="testimonials-grid">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testi_1_text">Ahmed helped us turn a quiet Facebook page into
+                        a constant source of
+                        high-quality bookings. Our summer packages started selling out weeks in advance thanks to his
+                        Meta campaigns and ongoing optimization.</p>
+                    <p class="testimonial-author" data-i18n="testi_1_author">– Tourism Company Owner, Egypt</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testi_2_text">We were impressed by how efficiently Ahmed
+                        drove WhatsApp leads for our
+                        cleaning services across the UAE. He kept our cost per conversation under control while
+                        maintaining strong volume and intent.</p>
+                    <p class="testimonial-author" data-i18n="testi_2_author">– Operations Manager, Home Services Brand
+                        (UAE)</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testi_3_text">Ahmed understands how to speak to our target
+                        audience. His campaigns
+                        consistently bring us qualified WhatsApp consultations, and he always backs his decisions with
+                        clear numbers and dashboards.</p>
+                    <p class="testimonial-author" data-i18n="testi_3_author">– Clinic Marketing Manager, Dubai</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testi_4_text">Working with Ahmed allowed us to scale our
+                        online sales in the GCC
+                        without losing profitability. He tracks every purchase, tests creatives fast, and knows exactly
+                        which campaigns to push or pause.</p>
+                    <p class="testimonial-author" data-i18n="testi_4_author">– Founder, E-commerce Brand (GCC)</p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testi_5_text">Ahmed is the kind of performance marketer you
+                        trust with your ad
+                        accounts. He treats each campaign like his own money, reports transparently, and proactively
+                        suggests new ideas to grow results.</p>
+                    <p class="testimonial-author" data-i18n="testi_5_author">– Agency Partner, GCC Region</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_contact">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p data-i18n="contact_intro">Ready to scale your business? Let's talk.</p>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>01147736668</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ahmedsayed11113@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Cairo, Egypt</span>
+                    </div>
+                    <div class="socials-large">
+                        <a href="https://wa.me/201147736668" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i>
+                            WhatsApp</a>
+                        <a href="mailto:ahmedsayed11113@gmail.com" class="btn btn-email"><i class="fas fa-envelope"></i>
+                            Email Me</a>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message feature coming soon!');">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn btn-primary" data-i18n="btn_send">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Ahmed Sayed. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/ahmedsayedsa"><i class="fab fa-linkedin"></i></a>
+                <a href="#admin-panel" id="admin-link" style="opacity: 0.3; font-size: 0.8rem;">Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Panel (Hidden Section) -->
+    <section id="admin-panel" class="section admin-section" style="display: none;">
+        <div class="container">
+            <h2>Local Admin Panel</h2>
+            <p>Update portfolio images. Images are saved in your browser's LocalStorage.</p>
+            <button onclick="resetImages()" class="btn btn-danger">Reset All Images</button>
+            <div class="admin-grid">
+
+                <div class="upload-group">
+                    <label>Hero Image</label>
+                    <img id="preview-hero" src="assets/hero_placeholder.jpg" class="admin-preview">
+                    <input type="file"
+                        onchange="handleImageUpload(event, 'portfolio_heroImage', 'preview-hero', 'hero-img')">
+                </div>
+
+                <div class="upload-group">
+                    <label>About Image</label>
+                    <img id="preview-about" src="assets/about_placeholder.jpg" class="admin-preview">
+                    <input type="file"
+                        onchange="handleImageUpload(event, 'portfolio_aboutImage', 'preview-about', 'about-img')">
+                </div>
+
+                <div class="upload-group">
+                    <label>Project 1 Image (Gulf Art)</label>
+                    <img id="preview-p1" src="assets/project1_placeholder.jpg" class="admin-preview">
+                    <input type="file"
+                        onchange="handleImageUpload(event, 'portfolio_p1', 'preview-p1', 'project-img-1')">
+                </div>
+
+                <div class="upload-group">
+                    <label>Project 2 Image (Home Care)</label>
+                    <img id="preview-p2" src="assets/project2_placeholder.jpg" class="admin-preview">
+                    <input type="file"
+                        onchange="handleImageUpload(event, 'portfolio_p2', 'preview-p2', 'project-img-2')">
+                </div>
+
+                <div class="upload-group">
+                    <label>Project 3 Image (Bahrain)</label>
+                    <img id="preview-p3" src="assets/project3_placeholder.jpg" class="admin-preview">
+                    <input type="file"
+                        onchange="handleImageUpload(event, 'portfolio_p3', 'preview-p3', 'project-img-3')">
+                </div>
+
+                <div class="upload-group">
+                    <label>Project 4 Image (Elmaali)</label>
+                    <img id="preview-p4" src="assets/project4_placeholder.jpg" class="admin-preview">
+                    <input type="file"
+                        onchange="handleImageUpload(event, 'portfolio_p4', 'preview-p4', 'project-img-4')">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
