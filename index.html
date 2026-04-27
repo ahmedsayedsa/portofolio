@@ -15,6 +15,78 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Icons (using simple text/emojis for now or placeholder classes, SVGs handled in CSS/JS if needed, using FontAwesome via CDN for professional look) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Stats Bar Styles */
+        .stats-bar {
+            background: rgba(10, 15, 30, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .stat-item .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #c9a227; /* Gold */
+            margin-bottom: 5px;
+        }
+        .stat-item:nth-child(even) .stat-number {
+            color: #20c997; /* Teal */
+        }
+        .stat-item .stat-label {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .stat-item .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Hero Badge Styles */
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .badge-gold {
+            background: rgba(201, 162, 39, 0.15);
+            color: #c9a227;
+            border: 1px solid rgba(201, 162, 39, 0.3);
+        }
+        .badge-teal {
+            background: rgba(32, 201, 151, 0.15);
+            color: #20c997;
+            border: 1px solid rgba(32, 201, 151, 0.3);
+        }
+        .badge-white {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -44,8 +116,13 @@
             <div class="hero-text">
                 <h1 data-i18n="hero_title">Ahmed Sayed <span class="highlight">|</span> Performance Marketing & Social
                     Media Specialist</h1>
-                <p class="subtitle" data-i18n="hero_subtitle">5+ years managing Meta & Google Ads across Egypt and the
-                    GCC</p>
+                <p class="subtitle" data-i18n="hero_subtitle" style="max-width: 600px;">Media Buyer & Performance Marketing Specialist — 
+                    101K+ Conversations | 321K+ EGP Managed | Egypt & GCC</p>
+                <div class="hero-badges">
+                    <span class="badge badge-gold">🏆 101K+ Conversations</span>
+                    <span class="badge badge-teal">💰 321K+ EGP Managed</span>
+                    <span class="badge badge-white">📍 Egypt & GCC Markets</span>
+                </div>
                 <div class="cta-group">
                     <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_work">View My Work</a>
                     <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_hire">Hire Me</a>
@@ -67,6 +144,30 @@
             </div>
         </div>
     </section>
+    
+    <!-- Stats Bar Section -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">101K+</span>
+                    <span class="stat-label">Conversations Generated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">321K+ EGP</span>
+                    <span class="stat-label">Ad Spend Managed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Ad Accounts Managed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -77,10 +178,12 @@
                     <p data-i18n="about_bio_1">Performance Marketing & Social Media Specialist with 5+ years managing
                         paid campaigns on Meta, Google and other digital platforms for travel, medical, beauty, and home
                         services brands in Egypt and the GCC.</p>
-                    <p data-i18n="about_bio_2">Proven track record optimizing 40+ ad accounts in Meta Ads Manager and
-                        Google Ads—driving engagement uplifts of up to 30% and reducing cost per conversion by around
-                        10%. Skilled at A/B testing creatives with design teams and using analytics tools for real-time
-                        optimization and reporting.</p>
+                    <p data-i18n="about_bio_2">Proven track record managing 40+ ad accounts across Meta Ads Manager 
+                        and Google Ads — generating over 101,000 direct customer conversations, 
+                        overseeing 321,559 EGP in ad spend for a single client, and achieving 
+                        a best-in-class CPC of 1.42 EGP. Skilled in A/B testing, audience 
+                        segmentation, creative optimization, and real-time performance reporting 
+                        across Egypt, UAE, KSA, and Bahrain.</p>
                     <div class="timeline">
                         <h3 data-i18n="timeline_title">Career Timeline</h3>
                         <div class="timeline-item">
@@ -258,7 +361,7 @@
             <h2 class="section-title" data-i18n="section_projects">Key Results & Projects</h2>
             <div class="projects-grid">
 
-                <!-- Project 4 (Elmaali Tours) -->
+                <!-- 1. Elmaali Tours (Egypt) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img id="project-img-4" src="assets/project4_placeholder.jpg" alt="Elmaali Tours">
@@ -285,13 +388,48 @@
                     </div>
                 </div>
 
-                <!-- Amir Eldomiaty (Egypt) -->
+                <!-- 2. Toyzania (GCC) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_12_title">Toyzania (GCC)</h3>
+                        <p data-i18n="proj_12_desc">E-commerce toy store scaling to ~1,970 purchases with 84x ROAS.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_1_label">Purchases</span><span
+                                class="kpi-value" data-i18n="kpi_12_1_val">1,970</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_2_label">Cost</span><span
+                                class="kpi-value" data-i18n="kpi_12_2_val">11.44 AED</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_4_label">ROAS</span><span
+                                class="kpi-value" data-i18n="kpi_12_4_val">~84.24</span></div>
+                    </div>
+                </div>
+
+                <!-- 3. Perfect Skin Clinic (UAE) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_6_title">Perfect Skin Clinic (UAE)</h3>
+                        <p data-i18n="proj_6_desc">WhatsApp campaigns for aesthetic treatments driving 1.8k+
+                            conversations.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_6_1_val">1,808</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_2_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_6_2_val">31k+ AED</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_3_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_6_3_val">6.96 AED</span></div>
+                    </div>
+                </div>
+
+                <!-- 4. Amir Eldomiaty (Egypt) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/amir-eldomiaty.png" alt="Amir Eldomiaty – F&B Egypt Meta Ads">
                     </div>
                     <div class="project-content">
-                        <h3>Amir Eldomiaty <span style="font-size:0.85em;opacity:0.8;">(أمير الدمياطي)</span></h3>
+                        <h3>Amir Eldomiaty — Bakery & Pastry <span style="font-size:0.85em;opacity:0.8;">(أمير الدمياطي)</span></h3>
                         <p>Multi-campaign Meta Ads strategy for an Egyptian F&amp;B brand. Drove 1,864 direct customer conversations across 3 targeted campaigns with strong cost efficiency.</p>
                         <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;">
                             <span style="background:linear-gradient(135deg,#c9a227,#a07d10);color:#0a0f1e;font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;">🏆 Best CPC: 1.42 EGP — Campaign المولد</span>
@@ -327,68 +465,7 @@
                     </div>
                 </div>
 
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img id="project-img-1" src="assets/project1_placeholder.jpg" alt="Gulf Art Furniture">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_1_title">Gulf Art Furniture (GCC)</h3>
-                        <p data-i18n="proj_1_desc">High volume profile visits campaign targeting UAE/GCC market.</p>
-                        <div class="kpi-box">
-                            <span class="kpi-label">Profile Visits</span>
-                            <span class="kpi-value">6,086</span>
-                        </div>
-                        <div class="kpi-box">
-                            <span class="kpi-label">Cost/Visit</span>
-                            <span class="kpi-value">0.05 AED</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img id="project-img-2" src="assets/project2_placeholder.jpg" alt="Home Care Services">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_2_title">Home Care Services (UAE)</h3>
-                        <p data-i18n="proj_2_desc">Lead generation and conversation campaigns for home services.</p>
-                        <div class="kpi-box">
-                            <span class="kpi-label">Conversations</span>
-                            <span class="kpi-value">389</span>
-                        </div>
-                        <div class="kpi-box">
-                            <span class="kpi-label">Cost/Msg</span>
-                            <span class="kpi-value">2.63 AED</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img id="project-img-3" src="assets/project3_placeholder.jpg" alt="Bahrain Services">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_3_title">Service Campaigns (Bahrain)</h3>
-                        <p data-i18n="proj_3_desc">Efficient messaging campaigns for local service providers.</p>
-                        <div class="kpi-box">
-                            <span class="kpi-label">Messages</span>
-                            <span class="kpi-value">52</span>
-                        </div>
-                        <div class="kpi-box">
-                            <span class="kpi-label">Cost/Msg</span>
-                            <span class="kpi-value">2.33 USD</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- GCC Projects (Data Added via Prompt) -->
-
-                <!-- 5. Gulf Art -->
+                <!-- 5. Gulf Art Furniture (GCC) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
@@ -408,79 +485,7 @@
                     </div>
                 </div>
 
-                <!-- 6. Perfect Skin -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_6_title">Perfect Skin Clinic (UAE)</h3>
-                        <p data-i18n="proj_6_desc">WhatsApp campaigns for aesthetic treatments driving 1.8k+
-                            conversations.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_1_label">Msgs</span><span
-                                class="kpi-value" data-i18n="kpi_6_1_val">1,808</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_2_label">Spend</span><span
-                                class="kpi-value" data-i18n="kpi_6_2_val">31k+ AED</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_6_3_label">Cost/Msg</span><span
-                                class="kpi-value" data-i18n="kpi_6_3_val">6.96 AED</span></div>
-                    </div>
-                </div>
-
-                <!-- 7. ByLeila -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_7_title">ByLeila Skin Care (GCC)</h3>
-                        <p data-i18n="proj_7_desc">Scaled skin care messaging funnel to 762+ conversations at efficient
-                            rates.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_1_label">Msgs</span><span
-                                class="kpi-value" data-i18n="kpi_7_1_val">762</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_2_label">Spend</span><span
-                                class="kpi-value" data-i18n="kpi_7_2_val">$2,172</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_3_label">Cost/Msg</span><span
-                                class="kpi-value" data-i18n="kpi_7_3_val">$2.85</span></div>
-                    </div>
-                </div>
-
-                <!-- 8. Best Clean -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_8_title">Best Clean (UAE)</h3>
-                        <p data-i18n="proj_8_desc">Home cleaning lead gen delivering 2.7k visits and hundreds of booking
-                            msgs.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_1_label">Visits</span><span
-                                class="kpi-value" data-i18n="kpi_8_1_val">2,719</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_2_label">Msgs</span><span
-                                class="kpi-value" data-i18n="kpi_8_2_val">550+</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_3_label">Cost/Visit</span><span
-                                class="kpi-value" data-i18n="kpi_8_3_val">$0.14</span></div>
-                    </div>
-                </div>
-
-                <!-- 9. Silver Shine -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_9_title">Silver Shine (GCC)</h3>
-                        <p data-i18n="proj_9_desc">Cleaning services push achieving 958 conversations at just $1.60
-                            each.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_1_label">Msgs</span><span
-                                class="kpi-value" data-i18n="kpi_9_1_val">958</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_2_label">Cost/Msg</span><span
-                                class="kpi-value" data-i18n="kpi_9_2_val">$1.60</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_3_label">Spend</span><span
-                                class="kpi-value" data-i18n="kpi_9_3_val">$1,530</span></div>
-                    </div>
-                </div>
-
-                <!-- 10. Fixer.bh -->
+                <!-- 6. Fixer.bh (Bahrain) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
@@ -499,7 +504,61 @@
                     </div>
                 </div>
 
-                <!-- 11. RIX -->
+                <!-- 7. Silver Shine (GCC) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_9_title">Silver Shine (GCC)</h3>
+                        <p data-i18n="proj_9_desc">Cleaning services push achieving 958 conversations at just $1.60
+                            each.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_9_1_val">958</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_2_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_9_2_val">$1.60</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_9_3_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_9_3_val">$1,530</span></div>
+                    </div>
+                </div>
+
+                <!-- 8. Best Clean (UAE) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_8_title">Best Clean (UAE)</h3>
+                        <p data-i18n="proj_8_desc">Home cleaning lead gen delivering 2.7k visits and hundreds of booking
+                            msgs.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_1_label">Visits</span><span
+                                class="kpi-value" data-i18n="kpi_8_1_val">2,719</span></div>
+                        <div class="kpi-box"><span class="stat-label" data-i18n="kpi_8_2_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_8_2_val">550+</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_8_3_label">Cost/Visit</span><span
+                                class="kpi-value" data-i18n="kpi_8_3_val">$0.14</span></div>
+                    </div>
+                </div>
+
+                <!-- 9. ByLeila Skin Care (GCC) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj_7_title">ByLeila Skin Care (GCC)</h3>
+                        <p data-i18n="proj_7_desc">Scaled skin care messaging funnel to 762+ conversations at efficient
+                            rates.</p>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_1_label">Msgs</span><span
+                                class="kpi-value" data-i18n="kpi_7_1_val">762</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_2_label">Spend</span><span
+                                class="kpi-value" data-i18n="kpi_7_2_val">$2,172</span></div>
+                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_7_3_label">Cost/Msg</span><span
+                                class="kpi-value" data-i18n="kpi_7_3_val">$2.85</span></div>
+                    </div>
+                </div>
+
+                <!-- 10. RIX Car Services (KSA) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
@@ -518,24 +577,26 @@
                     </div>
                 </div>
 
-                <!-- 12. Toyzania -->
+                <!-- 11. Dr. Shaymaa Salman (Egypt) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
                     </div>
                     <div class="project-content">
-                        <h3 data-i18n="proj_12_title">Toyzania (GCC)</h3>
-                        <p data-i18n="proj_12_desc">E-commerce toy store scaling to ~1,970 purchases with 84x ROAS.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_1_label">Purchases</span><span
-                                class="kpi-value" data-i18n="kpi_12_1_val">1,970</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_2_label">Cost</span><span
-                                class="kpi-value" data-i18n="kpi_12_2_val">11.44 AED</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_12_4_label">ROAS</span><span
-                                class="kpi-value" data-i18n="kpi_12_4_val">~84.24</span></div>
+                        <h3 data-i18n="proj_shaymaa_title">Dr. Shaymaa Salman (Egypt)</h3>
+                        <p data-i18n="proj_shaymaa_desc">Built strategies for medical & cosmetic services with significant cost reduction.</p>
+                        <div class="kpi-box">
+                            <span class="kpi-label">CPL Reduction</span>
+                            <span class="kpi-value">~20%</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Platform</span>
+                            <span class="kpi-value">FB & IG</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 13. Salawat -->
+                <!-- 12. Salawat App (Multi-Country) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
@@ -552,54 +613,22 @@
                     </div>
                 </div>
 
-                <!-- 14. Maen Jarrar -->
+                <!-- 13. Nogget Tours (Egypt) -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
                         <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
                     </div>
                     <div class="project-content">
-                        <h3 data-i18n="proj_14_title">Maen Jarrar Clinics (GCC)</h3>
-                        <p data-i18n="proj_14_desc">Targeted laser & dental messaging campaigns.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_14_1_label">Laser</span><span
-                                class="kpi-value" data-i18n="kpi_14_1_val">22</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_14_2_label">Dental</span><span
-                                class="kpi-value" data-i18n="kpi_14_2_val">37</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_14_3_label">Cost</span><span
-                                class="kpi-value" data-i18n="kpi_14_3_val">$2.86+</span></div>
-                    </div>
-                </div>
-
-                <!-- 15. Sakura -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_15_title">Sakura Active (GCC)</h3>
-                        <p data-i18n="proj_15_desc">Fashion brand awareness: 8k+ visits and 72k+ engagements.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_15_1_label">Visits</span><span
-                                class="kpi-value" data-i18n="kpi_15_1_val">8,659</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_15_2_label">Engage</span><span
-                                class="kpi-value" data-i18n="kpi_15_2_val">72k+</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_15_3_label">Cost/Visit</span><span
-                                class="kpi-value" data-i18n="kpi_15_3_val">$0.033</span></div>
-                    </div>
-                </div>
-
-                <!-- 16. Dr Beauty -->
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="assets/projects/generic-dashboard.png" alt="Performance marketing dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="proj_16_title">Dr. Beauty (UAE)</h3>
-                        <p data-i18n="proj_16_desc">High-volume cosmetic clinic campaign driving 1,738 purchases.</p>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_16_1_label">Purchases</span><span
-                                class="kpi-value" data-i18n="kpi_16_1_val">1,738</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_16_2_label">Cost</span><span
-                                class="kpi-value" data-i18n="kpi_16_2_val">11.76 AED</span></div>
-                        <div class="kpi-box"><span class="kpi-label" data-i18n="kpi_16_3_label">Spend</span><span
-                                class="kpi-value" data-i18n="kpi_16_3_val">20.4k AED</span></div>
+                        <h3 data-i18n="proj_nogget_title">Nogget Tours (Egypt)</h3>
+                        <p data-i18n="proj_nogget_desc">Tourism campaigns focused on engagement growth and ROI improvement.</p>
+                        <div class="kpi-box">
+                            <span class="kpi-label">Engagement</span>
+                            <span class="kpi-value">~25% ↑</span>
+                        </div>
+                        <div class="kpi-box">
+                            <span class="kpi-label">ROI Uplift</span>
+                            <span class="kpi-value">~15% ↑</span>
+                        </div>
                     </div>
                 </div>
 
