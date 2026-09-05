@@ -35,6 +35,18 @@ Simply open the `index.html` file in your web browser.
 - **Text**: Edit `index.html` for default English text, and `js/main.js` (inside `const translations`) for Arabic text.
 - **Colors**: Change CSS variables in `css/styles.css` (`--primary`, `--accent`).
 
+### Project cover art
+Each project card uses its own hand-authored SVG cover in `assets/projects/`, sized
+`1200x600` (the card wrapper is `aspect-ratio: 2 / 1`). Every cover states that
+project's real headline KPI — the same figure shown in the card's `.kpi-box`.
+
+- To swap in a real screenshot, change the card's `<img src>` in `index.html` and keep
+  the `width`/`height` attributes in a 2:1 ratio to avoid layout shift.
+- To add a new cover, copy any existing SVG and change the accent colour, the icon
+  path, and the four text strings. Use only web-safe fonts (`Georgia`,
+  `Arial`) — an SVG loaded via `<img>` cannot reach the page's web fonts — and
+  numeric character references such as `&#183;` rather than named HTML entities.
+
 ## Files
 - `index.html`: Main structure.
 - `css/styles.css`: Styling and RTL logic.
