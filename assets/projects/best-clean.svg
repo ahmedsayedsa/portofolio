@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Best Clean UAE - 2,719 profile visits at 0.14 dollars each">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1526"/>
+      <stop offset="0.55" stop-color="#080D1A"/>
+      <stop offset="1" stop-color="#05080F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.72">
+      <stop offset="0" stop-color="#4C7DFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#4C7DFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="kpi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#85A6FF"/>
+      <stop offset="1" stop-color="#2B4FBF"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0v50" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g transform="translate(960 240)">
+    <circle r="150" fill="none" stroke="#4C7DFF" stroke-opacity="0.16" stroke-width="2"/>
+    <circle r="112" fill="#4C7DFF" fill-opacity="0.05" stroke="#4C7DFF" stroke-opacity="0.22" stroke-width="2"/>
+    <g transform="translate(-102 -102) scale(8.5)" fill="none" stroke="#4C7DFF" stroke-opacity="0.5" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.7l5.7 5.7a8 8 0 11-11.4 0z"/>
+      <path d="M9 13a3 3 0 003 3"/>
+    </g>
+  </g>
+  <g fill="#4C7DFF" fill-opacity="0.13">
+    <rect x="880" y="506" width="28" height="34" rx="8"/>
+    <rect x="926" y="480" width="28" height="60" rx="8"/>
+    <rect x="972" y="458" width="28" height="82" rx="8"/>
+    <rect x="1018" y="470" width="28" height="70" rx="8"/>
+    <rect x="1064" y="424" width="28" height="116" rx="8"/>
+  </g>
+  <text x="64" y="100" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="7" fill="#8B95A8">HOME CLEANING</text>
+  <text x="64" y="186" font-family="Georgia, serif" font-size="66" font-weight="700" fill="#F5F7FB">BEST CLEAN</text>
+  <text x="64" y="240" font-family="Arial, Helvetica, sans-serif" font-size="32" letter-spacing="2" fill="#C3CBD9" fill-opacity="0.75">United Arab Emirates</text>
+  <rect x="64" y="296" width="190" height="3" rx="1.5" fill="url(#kpi)"/>
+  <text x="64" y="402" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="url(#kpi)">$0.14</text>
+  <text x="64" y="452" font-family="Arial, Helvetica, sans-serif" font-size="32" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">COST PER PROFILE VISIT &#183; 2,719 VISITS</text>
+  <rect y="597" width="1200" height="3" fill="url(#kpi)" opacity="0.5"/>
+</svg>

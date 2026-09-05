@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Ahmed Sayed - Performance Marketing Specialist. 5 plus years experience, 40 plus ad accounts, 101,000 plus conversations, 321,559 EGP managed spend, 1.42 EGP best CPC">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1526"/>
+      <stop offset="0.55" stop-color="#080D1A"/>
+      <stop offset="1" stop-color="#05080F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.12" r="0.7">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.1" cy="0.95" r="0.6">
+      <stop offset="0" stop-color="#4C7DFF" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#4C7DFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="kpi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E8C767"/>
+      <stop offset="1" stop-color="#A07D10"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0v50" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <rect width="800" height="1000" fill="url(#glow2)"/>
+  <g transform="translate(636 168)">
+    <circle r="104" fill="none" stroke="#D4AF37" stroke-opacity="0.16" stroke-width="2"/>
+    <circle r="78" fill="#D4AF37" fill-opacity="0.05" stroke="#D4AF37" stroke-opacity="0.22" stroke-width="2"/>
+    <g transform="translate(-66 -66) scale(5.5)" fill="none" stroke="#D4AF37" stroke-opacity="0.55" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+      <polyline points="16 7 22 7 22 13"/>
+    </g>
+  </g>
+  <text x="60" y="98" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="6" fill="#8B95A8">PERFORMANCE MARKETING</text>
+  <text x="60" y="188" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#F5F7FB">AHMED SAYED</text>
+  <text x="60" y="242" font-family="Arial, Helvetica, sans-serif" font-size="26" letter-spacing="2" fill="#C3CBD9" fill-opacity="0.75">Egypt &#183; UAE &#183; KSA &#183; Bahrain</text>
+  <rect x="60" y="292" width="170" height="3" rx="1.5" fill="url(#kpi)"/>
+
+  <text x="60" y="404" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" fill="url(#kpi)">5+</text>
+  <text x="60" y="444" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">YEARS OF EXPERIENCE</text>
+  <rect x="60" y="474" width="680" height="1" fill="#ffffff" fill-opacity="0.08"/>
+
+  <text x="60" y="524" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" fill="url(#kpi)">40+</text>
+  <text x="60" y="564" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">AD ACCOUNTS MANAGED</text>
+  <rect x="60" y="594" width="680" height="1" fill="#ffffff" fill-opacity="0.08"/>
+
+  <text x="60" y="644" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" fill="url(#kpi)">101,000+</text>
+  <text x="60" y="684" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">DIRECT CONVERSATIONS</text>
+  <rect x="60" y="714" width="680" height="1" fill="#ffffff" fill-opacity="0.08"/>
+
+  <text x="60" y="764" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" fill="url(#kpi)">321,559</text>
+  <text x="60" y="804" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">EGP AD SPEND, ONE CLIENT</text>
+  <rect x="60" y="834" width="680" height="1" fill="#ffffff" fill-opacity="0.08"/>
+
+  <text x="60" y="884" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" fill="url(#kpi)">1.42</text>
+  <text x="60" y="924" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">EGP BEST-IN-CLASS CPC</text>
+
+  <g fill="#4C7DFF" fill-opacity="0.1">
+    <rect x="536" y="906" width="26" height="42" rx="8"/>
+    <rect x="578" y="884" width="26" height="64" rx="8"/>
+    <rect x="620" y="896" width="26" height="52" rx="8"/>
+    <rect x="662" y="856" width="26" height="92" rx="8"/>
+    <rect x="704" y="836" width="26" height="112" rx="8"/>
+  </g>
+  <rect y="997" width="800" height="3" fill="url(#kpi)" opacity="0.5"/>
+</svg>
