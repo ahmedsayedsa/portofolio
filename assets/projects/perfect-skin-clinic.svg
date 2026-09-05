@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Perfect Skin Clinic UAE - 1,808 WhatsApp conversations">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1526"/>
+      <stop offset="0.55" stop-color="#080D1A"/>
+      <stop offset="1" stop-color="#05080F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.72">
+      <stop offset="0" stop-color="#E86A8A" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#E86A8A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="kpi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F49BB0"/>
+      <stop offset="1" stop-color="#B03E5C"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0v50" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g transform="translate(960 240)">
+    <circle r="150" fill="none" stroke="#E86A8A" stroke-opacity="0.16" stroke-width="2"/>
+    <circle r="112" fill="#E86A8A" fill-opacity="0.05" stroke="#E86A8A" stroke-opacity="0.22" stroke-width="2"/>
+    <g transform="translate(-102 -102) scale(8.5)" fill="none" stroke="#E86A8A" stroke-opacity="0.5" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8z"/>
+      <path d="M8.6 9.6c.6 2.6 3.2 5.2 5.8 5.8"/>
+    </g>
+  </g>
+  <g fill="#E86A8A" fill-opacity="0.13">
+    <rect x="880" y="490" width="28" height="50" rx="8"/>
+    <rect x="926" y="462" width="28" height="78" rx="8"/>
+    <rect x="972" y="476" width="28" height="64" rx="8"/>
+    <rect x="1018" y="430" width="28" height="110" rx="8"/>
+    <rect x="1064" y="422" width="28" height="118" rx="8"/>
+  </g>
+  <text x="64" y="100" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="7" fill="#8B95A8">AESTHETIC CLINIC</text>
+  <text x="64" y="186" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#F5F7FB">PERFECT SKIN CLINIC</text>
+  <text x="64" y="240" font-family="Arial, Helvetica, sans-serif" font-size="32" letter-spacing="2" fill="#C3CBD9" fill-opacity="0.75">United Arab Emirates</text>
+  <rect x="64" y="296" width="190" height="3" rx="1.5" fill="url(#kpi)"/>
+  <text x="64" y="402" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="url(#kpi)">1,808</text>
+  <text x="64" y="452" font-family="Arial, Helvetica, sans-serif" font-size="32" letter-spacing="3" fill="#C3CBD9" fill-opacity="0.8">WHATSAPP CONVERSATIONS</text>
+  <rect y="597" width="1200" height="3" fill="url(#kpi)" opacity="0.5"/>
+</svg>

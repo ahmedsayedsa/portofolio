@@ -10,13 +10,13 @@ const translations = {
         nav_contact: "Contact",
 
         hero_title: "Ahmed Sayed | Performance Marketing & Social Media Specialist",
-        hero_subtitle: "5+ years managing Meta & Google Ads across Egypt and the GCC",
+        hero_subtitle: "Media Buyer & Performance Marketing Specialist — 101K+ Conversations | 321K+ EGP Managed | Egypt & GCC",
         hero_btn_work: "View My Work",
         hero_btn_hire: "Hire Me",
 
         section_about: "About Me",
         about_bio_1: "Performance Marketing & Social Media Specialist with 5+ years managing paid campaigns on Meta, Google and other digital platforms for travel, medical, beauty, and home services brands in Egypt and the GCC.",
-        about_bio_2: "Proven track record optimizing 40+ ad accounts—driving engagement uplifts of up to 30% and reducing cost per conversion by around 10%. Skilled at A/B testing and analytics.",
+        about_bio_2: "Proven track record managing 40+ ad accounts across Meta Ads Manager and Google Ads — generating over 101,000 direct customer conversations, overseeing 321,559 EGP in ad spend for a single client, and achieving a best-in-class CPC of 1.42 EGP. Skilled in A/B testing, audience segmentation, creative optimization, and real-time performance reporting across Egypt, UAE, KSA, and Bahrain.",
         timeline_title: "Career Timeline",
         role_elmaali: "Elmaali Tours",
         role_tiehouse: "Tie House",
@@ -67,13 +67,13 @@ const translations = {
         proj_3_desc: "Efficient messaging campaigns for local service providers.",
 
         proj_4_title: "Elmaali Tours (Egypt)",
-        proj_4_desc: "Always-on messaging campaigns generating 98k+ leads.",
+        proj_4_desc: "Always-on Meta Ads messaging campaigns generating 101K+ direct conversations over 32 months (Jul 2023 – Mar 2026).",
         kpi_4_1_label: "Conversations",
-        kpi_4_1_val: "98,496",
+        kpi_4_1_val: "101,000+",
         kpi_4_2_label: "Spend",
-        kpi_4_2_val: "22,577 EGP",
+        kpi_4_2_val: "321,559 EGP",
         kpi_4_3_label: "Cost/Conv",
-        kpi_4_3_val: "0.23 EGP",
+        kpi_4_3_val: "3.18 EGP",
         kpi_4_4_label: "Avg CTR",
         kpi_4_4_val: "8%",
 
@@ -202,13 +202,13 @@ const translations = {
         nav_contact: "تواصل معي",
 
         hero_title: "أحمد سيد | متخصص تسويق أداء وسوشيال ميديا",
-        hero_subtitle: "خبرة أكثر من 5 سنوات في إدارة إعلانات ميتا وجوجل في مصر والخليج",
+        hero_subtitle: "مشتري وسائط ومتخصص تسويق أداء — أكثر من 101 ألف محادثة | 321 ألف ج.م ميزانيات مُدارة | مصر والخليج",
         hero_btn_work: "شاهد أعمالي",
         hero_btn_hire: "وظفني",
 
         section_about: "عنّي",
         about_bio_1: "متخصص في تسويق الأداء ووسائل التواصل الاجتماعي مع خبرة تزيد عن 5 سنوات في إدارة الحملات المدفوعة على ميتا وجوجل لعلامات تجارية في مجالات السياحة، الطب، التجميل، والخدمات المنزلية في مصر والخليج.",
-        about_bio_2: "سجل حافل في تحسين أكثر من 40 حساب إعلاني—مما أدى لزيادة التفاعل بنسبة تصل إلى 30% وتقليل تكلفة التحويل بنسبة 10%. مهارة عالية في اختبار الإعلانات (A/B testing) والتحليل.",
+        about_bio_2: "سجل حافل في إدارة أكثر من 40 حسابًا إعلانيًا على ميتا وجوجل — بتحقيق أكثر من 101,000 محادثة مباشرة مع العملاء، وإدارة 321,559 ج.م إنفاق إعلاني لعميل واحد، والوصول لأفضل تكلفة نقرة 1.42 ج.م. خبرة قوية في اختبار الإعلانات (A/B testing)، تقسيم الجماهير، تحسين الإبداعات، والتقارير اللحظية في مصر والإمارات والسعودية والبحرين.",
         timeline_title: "المسار المهني",
         role_elmaali: "المعالي تورز",
         role_tiehouse: "تاي هاوس",
@@ -259,13 +259,13 @@ const translations = {
         proj_3_desc: "حملات رسائل فعالة لمزودي الخدمات المحليين.",
 
         proj_4_title: "المعالي تورز (مصر)",
-        proj_4_desc: "حملات رسائل مستمرة حققت أكثر من 98 ألف محادثة.",
+        proj_4_desc: "حملات رسائل مستمرة على ميتا حققت أكثر من 101 ألف محادثة مباشرة خلال 32 شهرًا (يوليو 2023 – مارس 2026).",
         kpi_4_1_label: "محادثات",
-        kpi_4_1_val: "98,496",
+        kpi_4_1_val: "101,000+",
         kpi_4_2_label: "إنفاق",
-        kpi_4_2_val: "22,577 ج.م",
+        kpi_4_2_val: "321,559 ج.م",
         kpi_4_3_label: "تكلفة/محادثة",
-        kpi_4_3_val: "0.23 ج.م",
+        kpi_4_3_val: "3.18 ج.م",
         kpi_4_4_label: "نسبة النقر",
         kpi_4_4_val: "8%",
 
@@ -415,7 +415,17 @@ function updateLanguage(lang) {
     items.forEach(item => {
         const key = item.getAttribute('data-i18n');
         if (translations[lang][key]) {
-            item.textContent = translations[lang][key];
+            const text = translations[lang][key];
+            if (item.hasAttribute('data-i18n-highlight')) {
+                // Keep the gold separator styling instead of flattening the markup
+                const escaped = text
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+                item.innerHTML = escaped.replace(/\|/g, '<span class="highlight">|</span>');
+            } else {
+                item.textContent = text;
+            }
         }
     });
 
@@ -535,3 +545,101 @@ function resetImages() {
         location.reload();
     }
 }
+
+
+// --- Premium UI Enhancements ---
+
+// 1. Scroll reveal for sections and cards
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll(
+        '.section-title, .about-text, .about-img, .skill-card, .exp-card, .project-card, .service-card, .testimonial-card, .contact-info, .contact-form, .stat-item'
+    );
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced || !('IntersectionObserver' in window)) return;
+
+    targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${(i % 6) * 70}ms`;
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    targets.forEach(el => observer.observe(el));
+
+    // Backstop: anchor jumps can skip elements entirely, so reveal anything
+    // that has already scrolled past the fold.
+    const revealPassed = () => {
+        document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight) {
+                el.classList.add('is-visible');
+                observer.unobserve(el);
+            }
+        });
+    };
+    window.addEventListener('scroll', revealPassed, { passive: true });
+});
+
+// 2. Navbar shadow once the page is scrolled
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    const onScroll = () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+});
+
+// 3. Count-up animation for the stats bar
+document.addEventListener('DOMContentLoaded', () => {
+    const numbers = document.querySelectorAll('.stat-item .stat-number');
+    if (!numbers.length || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const animate = (el) => {
+        const raw = el.textContent.trim();
+        // Split "321K+ EGP" into leading number and trailing suffix
+        const match = raw.match(/^([\d.,]+)(.*)$/);
+        if (!match) return;
+
+        const target = parseFloat(match[1].replace(/,/g, ''));
+        if (!isFinite(target)) return;
+
+        const suffix = match[2];
+        const decimals = (match[1].split('.')[1] || '').length;
+        const duration = 1400;
+        const start = performance.now();
+
+        const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            const value = target * eased;
+            el.textContent = value.toLocaleString('en-US', {
+                minimumFractionDigits: decimals,
+                maximumFractionDigits: decimals
+            }) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animate(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.6 });
+
+    numbers.forEach(el => observer.observe(el));
+});
