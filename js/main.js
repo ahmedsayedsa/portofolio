@@ -643,3 +643,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     numbers.forEach(el => observer.observe(el));
 });
+
+// --- Work Index: expandable rows + sticky preview (redesign) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const rows = Array.from(document.querySelectorAll('.work-row'));
+    if (!rows.length) return;
+
+    const prevImg = document.getElementById('work-preview-img');
+    const prevTitle = document.getElementById('wp-title');
+    const prevKpi = document.getElementById('wp-kpi');
+    const finePointer = window.matchMedia('(hover: hover) and (min-width: 1081px)');
+    let lastRow = null;
+
+    const setPreview = (row) => {
+        if (!prevImg || row === lastRow) return;
+        lastRow = row;
+        const img = row.querySelector('.work-media img');
+        const title = row.querySelector('.work-title');
+        const metric = row.querySelector('.work-metric');
+        if (img) {
+            const src = img.currentSrc || img.src;
+            if (prevImg.getAttribute('src') !== src) {
+                prevImg.style.opacity = '0';
+                setTimeout(() => { prevImg.src = src; prevImg.style.opacity = '1'; }, 140);
+            }
+        }
+        if (title && prevTitle) prevTitle.textContent = title.textContent.trim();
+        if (metric && prevKpi) prevKpi.textContent = metric.textContent.trim();
+    };
+
+    rows.forEach(row => {
+        const head = row.querySelector('.work-head');
+        if (!head) return;
+        head.addEventListener('click', () => {
+            const isOpen = row.classList.contains('open');
+            rows.forEach(r => {
+                r.classList.remove('open');
+                const h = r.querySelector('.work-head');
+                if (h) h.setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                row.classList.add('open');
+                head.setAttribute('aria-expanded', 'true');
+                setPreview(row);
+            }
+        });
+        row.addEventListener('mouseenter', () => {
+            if (finePointer.matches) setPreview(row);
+        });
+    });
+
+    // Open the first case by default so the section never looks empty
+    const firstHead = rows[0].querySelector('.work-head');
+    rows[0].classList.add('open');
+    if (firstHead) firstHead.setAttribute('aria-expanded', 'true');
+    setPreview(rows[0]);
+});
