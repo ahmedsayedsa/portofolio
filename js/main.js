@@ -644,25 +644,99 @@ document.addEventListener('DOMContentLoaded', () => {
     numbers.forEach(el => observer.observe(el));
 });
 
-// --- Work Index: expandable rows (redesign) ---
+// --- Work Index: expandable rows + book-shelf preview (redesign) ---
 document.addEventListener('DOMContentLoaded', () => {
     const rows = Array.from(document.querySelectorAll('.work-row'));
     if (!rows.length) return;
+
+    const layout = document.querySelector('.work-layout');
+    const prevImg = document.getElementById('work-preview-img');
+    const prevTitle = document.getElementById('wp-title');
+    const prevKpi = document.getElementById('wp-kpi');
+    const spinesBox = document.getElementById('shelf-spines');
+    const finePointer = window.matchMedia('(hover: hover) and (min-width: 1081px)');
+    let lastRow = null;
+    const spines = [];
+
+    const setPreview = (row) => {
+        if (!prevImg || row === lastRow) return;
+        lastRow = row;
+        const img = row.querySelector('.work-media img');
+        const title = row.querySelector('.work-title');
+        const metric = row.querySelector('.work-metric');
+        if (img) {
+            const src = img.currentSrc || img.src;
+            if (prevImg.getAttribute('src') !== src) {
+                prevImg.style.opacity = '0';
+                setTimeout(() => { prevImg.src = src; prevImg.style.opacity = '1'; }, 140);
+            }
+        }
+        if (title && prevTitle) prevTitle.textContent = title.textContent.trim();
+        if (metric && prevKpi) prevKpi.textContent = metric.textContent.trim();
+        spines.forEach((s, i) => s.classList.toggle('active', rows[i] === row));
+    };
+
+    const openRow = (row) => {
+        rows.forEach(r => {
+            const h = r.querySelector('.work-head');
+            if (r === row) {
+                r.classList.add('open');
+                if (h) h.setAttribute('aria-expanded', 'true');
+            } else {
+                r.classList.remove('open');
+                if (h) h.setAttribute('aria-expanded', 'false');
+            }
+        });
+        setPreview(row);
+        if (layout) layout.classList.add('has-open');
+    };
+
+    const closeAll = () => {
+        rows.forEach(r => {
+            r.classList.remove('open');
+            const h = r.querySelector('.work-head');
+            if (h) h.setAttribute('aria-expanded', 'false');
+        });
+        if (layout) layout.classList.remove('has-open');
+    };
 
     rows.forEach(row => {
         const head = row.querySelector('.work-head');
         if (!head) return;
         head.addEventListener('click', () => {
-            const isOpen = row.classList.contains('open');
-            rows.forEach(r => {
-                r.classList.remove('open');
-                const h = r.querySelector('.work-head');
-                if (h) h.setAttribute('aria-expanded', 'false');
-            });
-            if (!isOpen) {
-                row.classList.add('open');
-                head.setAttribute('aria-expanded', 'true');
-            }
+            if (row.classList.contains('open')) closeAll();
+            else openRow(row);
+        });
+        row.addEventListener('mouseenter', () => {
+            if (finePointer.matches) setPreview(row);
         });
     });
+
+    // Build the shelf spines from the rows themselves
+    if (spinesBox) {
+        rows.forEach((row, i) => {
+            const num = row.querySelector('.work-num');
+            const title = row.querySelector('.work-title');
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'spine';
+            b.textContent = num ? num.textContent.trim() : String(i + 1);
+            if (title) b.title = title.textContent.trim();
+            b.addEventListener('click', () => {
+                openRow(row);
+                row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+            spinesBox.appendChild(b);
+            spines.push(b);
+        });
+    }
+
+    // First case ships open in the markup; align preview + layout state
+    const open = rows.find(r => r.classList.contains('open'));
+    if (open) {
+        setPreview(open);
+        if (layout) layout.classList.add('has-open');
+    } else if (rows.length) {
+        setPreview(rows[0]);
+    }
 });
