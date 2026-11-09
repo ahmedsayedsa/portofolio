@@ -643,3 +643,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     numbers.forEach(el => observer.observe(el));
 });
+
+// --- Work Shelf: spine navigation + case stage (redesign) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const panels = Array.from(document.querySelectorAll('.case-panel'));
+    const shelf = document.getElementById('shelf');
+    if (!panels.length || !shelf) return;
+
+    const finePointer = window.matchMedia('(hover: hover) and (min-width: 901px)');
+    const spines = [];
+
+    const activate = (i) => {
+        panels.forEach((p, j) => {
+            p.classList.toggle('active', i === j);
+            if (i === j) p.classList.add('is-visible');
+        });
+        spines.forEach((s, j) => s.classList.toggle('active', i === j));
+    };
+
+    panels.forEach((panel, i) => {
+        const num = panel.querySelector('.work-num');
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'spine-book';
+        b.setAttribute('aria-label', panel.getAttribute('data-short') || '');
+        const n = document.createElement('span');
+        n.className = 'spine-num';
+        n.textContent = num ? num.textContent.trim() : String(i + 1);
+        const l = document.createElement('span');
+        l.className = 'spine-label';
+        l.textContent = panel.getAttribute('data-short') || '';
+        b.appendChild(n);
+        b.appendChild(l);
+        b.addEventListener('click', () => activate(i));
+        b.addEventListener('mouseenter', () => { if (finePointer.matches) activate(i); });
+        shelf.appendChild(b);
+        spines.push(b);
+    });
+
+    const initial = panels.findIndex(p => p.classList.contains('active'));
+    activate(initial < 0 ? 0 : initial);
+});

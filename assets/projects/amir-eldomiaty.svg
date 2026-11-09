@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Amir Eldomiaty — campaign comparison: 1,864 conversations, best CPC 1.42 EGP">
+  <rect width="1200" height="600" fill="#F3F1EC"/>
+  <rect x="28" y="28" width="1144" height="544" fill="none" stroke="#14140F" stroke-width="2"/>
+  <rect x="72" y="62" width="15" height="15" fill="#FF4D00"/>
+  <text x="102" y="76" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="5" fill="#73705F">META ADS — EGYPT</text>
+  <text x="600" y="106" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" fill="#14140F">مقارنة أداء الحملات الثلاث</text>
+  <rect x="796" y="126" width="332" height="348" fill="#14140F" stroke="#14140F" stroke-width="2"/>
+<rect x="910" y="140" width="104" height="30" fill="#FF4D00"/><text x="962" y="162" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">الأفضل</text>  <text x="962" y="214" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="37" font-weight="800" fill="#F3F1EC">المولد</text>
+  <text x="962" y="268" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#F3F1EC">1,047 محادثة</text>
+  <text x="962" y="314" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#F3F1EC">CPC 1.42 EGP</text>
+  <text x="962" y="360" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#F3F1EC">إنفاق 9,820 EGP</text>
+  <text x="962" y="406" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#F3F1EC">وصول 143K</text>
+  <text x="962" y="452" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#F3F1EC">CTR 6.68%</text>
+
+  <rect x="434" y="126" width="332" height="348" fill="#ECE9E1" stroke="#14140F" stroke-width="2"/>
+  <text x="600" y="196" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="37" font-weight="800" fill="#14140F">بيتزا</text>
+  <text x="600" y="268" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">723 محادثة</text>
+  <text x="600" y="314" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">CPC 3.73 EGP</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">إنفاق 7,580 EGP</text>
+  <text x="600" y="406" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">وصول 56K</text>
+  <text x="600" y="452" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">CTR 8.34%</text>
+
+  <rect x="72" y="126" width="332" height="348" fill="#ECE9E1" stroke="#14140F" stroke-width="2"/>
+  <text x="238" y="196" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="37" font-weight="800" fill="#14140F">بيتزا ايطالي</text>
+  <text x="238" y="226" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="20" fill="#73705F">(تجريبي)</text>
+  <text x="238" y="292" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">94 محادثة</text>
+  <text x="238" y="338" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">CPC 6.71 EGP</text>
+  <text x="238" y="384" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">إنفاق 1,402 EGP</text>
+  <text x="238" y="430" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">وصول 16K</text>
+  <text x="238" y="476" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="27" font-weight="600" fill="#14140F">CTR 6.05%</text>
+
+  <rect x="72" y="492" width="1056" height="56" fill="#14140F"/>
+  <text x="600" y="529" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="28" font-weight="700" fill="#F3F1EC">إجمالي: 1,864 محادثة — 18,803 EGP — وصول 216,898</text>
+</svg>
