@@ -672,6 +672,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (metric && prevKpi) prevKpi.textContent = metric.textContent.trim();
     };
 
+    const layout = document.querySelector('.work-layout');
+    const syncLayout = () => {
+        if (layout) layout.classList.toggle('has-open', rows.some(r => r.classList.contains('open')));
+    };
+
     rows.forEach(row => {
         const head = row.querySelector('.work-head');
         if (!head) return;
@@ -687,15 +692,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 head.setAttribute('aria-expanded', 'true');
                 setPreview(row);
             }
+            syncLayout();
         });
         row.addEventListener('mouseenter', () => {
             if (finePointer.matches) setPreview(row);
         });
     });
 
-    // Open the first case by default so the section never looks empty
-    const firstHead = rows[0].querySelector('.work-head');
-    rows[0].classList.add('open');
-    if (firstHead) firstHead.setAttribute('aria-expanded', 'true');
-    setPreview(rows[0]);
+    // First case ships open in the markup; align the preview + layout state
+    const openRow = rows.find(r => r.classList.contains('open'));
+    if (openRow) setPreview(openRow);
+    syncLayout();
 });
