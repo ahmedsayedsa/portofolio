@@ -644,38 +644,10 @@ document.addEventListener('DOMContentLoaded', () => {
     numbers.forEach(el => observer.observe(el));
 });
 
-// --- Work Index: expandable rows + sticky preview (redesign) ---
+// --- Work Index: expandable rows (redesign) ---
 document.addEventListener('DOMContentLoaded', () => {
     const rows = Array.from(document.querySelectorAll('.work-row'));
     if (!rows.length) return;
-
-    const prevImg = document.getElementById('work-preview-img');
-    const prevTitle = document.getElementById('wp-title');
-    const prevKpi = document.getElementById('wp-kpi');
-    const finePointer = window.matchMedia('(hover: hover) and (min-width: 1081px)');
-    let lastRow = null;
-
-    const setPreview = (row) => {
-        if (!prevImg || row === lastRow) return;
-        lastRow = row;
-        const img = row.querySelector('.work-media img');
-        const title = row.querySelector('.work-title');
-        const metric = row.querySelector('.work-metric');
-        if (img) {
-            const src = img.currentSrc || img.src;
-            if (prevImg.getAttribute('src') !== src) {
-                prevImg.style.opacity = '0';
-                setTimeout(() => { prevImg.src = src; prevImg.style.opacity = '1'; }, 140);
-            }
-        }
-        if (title && prevTitle) prevTitle.textContent = title.textContent.trim();
-        if (metric && prevKpi) prevKpi.textContent = metric.textContent.trim();
-    };
-
-    const layout = document.querySelector('.work-layout');
-    const syncLayout = () => {
-        if (layout) layout.classList.toggle('has-open', rows.some(r => r.classList.contains('open')));
-    };
 
     rows.forEach(row => {
         const head = row.querySelector('.work-head');
@@ -690,17 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isOpen) {
                 row.classList.add('open');
                 head.setAttribute('aria-expanded', 'true');
-                setPreview(row);
             }
-            syncLayout();
-        });
-        row.addEventListener('mouseenter', () => {
-            if (finePointer.matches) setPreview(row);
         });
     });
-
-    // First case ships open in the markup; align the preview + layout state
-    const openRow = rows.find(r => r.classList.contains('open'));
-    if (openRow) setPreview(openRow);
-    syncLayout();
 });
